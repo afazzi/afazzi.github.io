@@ -1,301 +1,41 @@
 body {
   overflow-y: hidden; /* Hide vertical scrollbar */
   overflow-x: hidden; /* Hide horizontal scrollbar */
- /* width: 500px;
-  aspect-ratio: 4/3; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+  margin: 0;
+  overflow: hidden;
 }
 
-.center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+video#bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
-  text-align: center;
-}
-
-.bottom10 {
-  position: fixed;
-  bottom: 10%;
-}
-
-.bottom20 {
-  position: fixed;
-  bottom: 20%;
-}
-
-.logo {
-  position: fixed;
-  top: 5%;
-  right: 0;
-  left: 0;
-  margin-right: auto;
-  margin-left: auto;
-  width: 40%;
-  min-width: 500px;
-  animation: fade-in-title 5s;
-  -webkit-animation-fill-mode: forwards;
-  z-index: 1;
-}
-
-.snake {
-  position: fixed;
-  top: 15%;
-  right: 0;
-  left: 0;
-  margin-right: auto;
-  margin-left: auto;
-  height: 75%;
-  width: auto;
-  animation: fade-in-snake 5s;
-  z-index: 0;
-}
-.snakebg {
-  position: fixed;
-  top: 15%;
-  right: 0;
-  left: 0;
-  margin-right: auto;
-  margin-left: auto;
-  height: 75%;
-  width: auto;
-  animation: fade-in 8s;
+  height: 100%;
+  object-fit: cover;
   z-index: -1;
 }
 
-.button {
+.begin-button {
   position: fixed;
   bottom: 20%;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: xx-large;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: red;
-  -webkit-text-stroke: 2px;
-  -webkit-text-stroke-color: darkred;
-  -webkit-text-fill-color: red;
-  font-variant: small-caps;
-  font-family: "Monaco", "Courier New", monospace;
-  animation: press-start 3s linear infinite, fade-in 10s;
-  text-decoration: none;
+  right: 20%;
+  padding: 20px 40px;
+  font-size: 24px;
+  border: 3px dotted #000;
+  background-color: #fff;
+  cursor: pointer;
 }
 
-@keyframes press-start{
-  0% {
-    color: red;
-  }
-  25% {
-    color: white;
-  }  
-  50% {
-    color: red;
-  }  
-}
-
-.button a{
-  color: inherit;
-  text-decoration: none;
-}
-
-.copyright {
-  position: fixed;
-  bottom: 10%;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: orange;
-  opacity: 75%;
-  font-variant: small-caps;
-  font-family: "Monaco", "Courier New", monospace;
-  animation: fade-in 10s;
-}
-
-.copyright a {
-  color: inherit;
-  text-decoration: none;
-}
-
-.main-bg {
-  background-color: black;
-  max-width: 500px;
-}
-
-.sliding-background {
-  background: url("img/bgtile.png") repeat center;
-  background-size: 300% 100%; /* Use background-size instead of size */
-  background-position: left center; /* Start the background image aligned to the left */
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh; /* Ensure the element takes the full viewport height */
-  animation: slide 65s linear infinite;
-  z-index: -3;
-}
-
-.zooming-background {
-  background: url("img/bg.jpg");
-  mix-blend-mode: screen;
-  position: absolute;
-  background-size: cover;
-  background-position: center;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  animation: zoom 35s linear infinite;
-  -webkit-animation-fill-mode: forwards;
-  z-index: -2;
-}
-
-.vertical-menu {
-  width: 200px;
-  height: 125px;
-  overflow-y: auto;
-  overflow-y: hidden; /* Hide vertical scrollbar */
-  overflow-x: hidden; /* Hide horizontal scrollbar */
-  color: red;
-  -webkit-text-stroke: 2px;
-  -webkit-text-stroke-color: darkred;
-  -webkit-text-fill-color: red;
-  font-variant: small-caps;
-  font-family: "Monaco", "Courier New", monospace;
-}
-
-.vertical-menu a {
-  color: black;
-  display: block;
-  padding: 12px;
-  text-decoration: none;
-}
-
-.vertical-menu a:hover {
+.credits {
   color: white;
+  position: fixed;
+  bottom: 20%;
+  left: 20%;
+  padding: 20px 40px;
+  font-size: 24px;
 }
-
-.vertical-menu a.active {
-  color: white;
-}
-
-@keyframes slide {
-  0% {
-    background-position: 0 0;
-    filter: hue-rotate(0turn);
-  }
-  100% {
-    background-position: 300% 0;
-    filter: hue-rotate(1turn);
-  }
-}
-
-@keyframes zoom {
-  0% {
-    transform: scale(0.9);
-    opacity: 0;
-  }
-  6.25% {
-    transform: scale(1);
-    opacity: 1;
-    filter: hue-rotate(0deg);
-  }
-  12.5% {
-    transform: scale(1.1);
-    opacity: 1;
-  }
-  18.75% {
-    transform: scale(1.2);
-    opacity: 0;
-  }
-  25% {
-    transform: scale(0.9);
-    opacity: 0;
-  }
-  31.25% {
-    transform: scale(1);
-    opacity: 1;
-    filter: hue-rotate(45deg);
-  }
-  37.5% {
-    transform: scale(1.1);
-    opacity: 1;
-  }
-  43.75% {
-    transform: scale(1.2);
-    opacity: 0;
-  }
-  50% {
-    transform: scale(0.9);
-    opacity: 0;
-  }
-  56.25% {
-    transform: scale(1);
-    opacity: 1;
-    filter: hue-rotate(90deg);
-  }
-  62.5% {
-    transform: scale(1.1);
-    opacity: 1;
-  }
-  68.75% {
-    transform: scale(1.2);
-    opacity: 0;
-  }
-  75% {
-    transform: scale(0.9);
-    opacity: 0;
-  }
-  81.25% {
-    transform: scale(1);
-    opacity: 1;
-    filter: hue-rotate(135deg);
-  }
-  87.5% {
-    transform: scale(1.1);
-    opacity: 1;
-  }
-  93.75% {
-    transform: scale(1.2);
-    opacity: 0;
-  }
-  100% {
-    transform: scale(1.3);
-    opacity: 0;
-  }
-}
-
-@keyframes fade-in{
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }  
-}
-
-@keyframes fade-in-title{
-  0% {
-    opacity: 0;
-  }
-  80% {
-    opacity: 1;
-  }  
-  100% {
-    opacity: .5;
-  }  
-}
-
-@keyframes fade-in-snake{
-  0% {
-    opacity: 0;
-  }
-  75% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }  
-}
-
