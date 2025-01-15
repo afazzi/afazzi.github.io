@@ -82,6 +82,8 @@ html, body {
 ul {
     list-style-type: none;
     padding-left: 0;
+    margin-top: 0; /* Reduce the gap */
+    margin-bottom: 5px; /* reduced gap */;
 }
 .pad {
     padding: 10px;
@@ -94,6 +96,7 @@ ul {
     padding-bottom: 5px;
     padding-left: 10px;
     margin-left: 0;
+    margin-bottom: 5px; /* Reduce the gap */
 }
 .category:hover {
     background-color: #323a4b;
