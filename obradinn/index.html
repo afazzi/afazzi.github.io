@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Animated Stippling Effect</title>
+<style>
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+  }
+
+  .stippling {
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, #000 1px, transparent 1px);
+    background-size: 10px 10px;
+    animation: stippleAnimation 1s infinite;
+  }
+
+  @keyframes stippleAnimation {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 10px 10px;
+    }
+  }
+</style>
+</head>
+<body>
+  <div class="stippling"></div>
+</body>
+</html>
