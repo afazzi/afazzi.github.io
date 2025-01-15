@@ -1,0 +1,36 @@
+.splash_text {
+  font-family: 'minecraftregular', sans-serif;
+  font-size: 30px;
+  color:#fafd11;
+  text-shadow: 1px 2px #463903;
+  position:absolute;
+  animation:text .5s linear infinite normal;
+  top: 60px;
+  left: 800px;
+  /* transform rotate will affect position */
+}
+
+.top_buttons {
+  display: flex; 
+  gap: 10px; 
+}
+
+.bottom_buttons {
+  display: flex; 
+  gap: 10px; 
+  margin-top: 40px;
+}
+
+top: 125px;
+left: 828px;
+@keyframes text {
+  0% {
+    transform:scale(1) rotate(-30deg);
+  }
+  50% {
+    transform:scale(0.9) rotate(-30deg);
+  }
+  100% {
+    transform:scale(1) rotate(-30deg);
+  }
+}
