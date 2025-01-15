@@ -1,0 +1,89 @@
+body {
+  background-color: black;
+  overflow-y: hidden; /* Hide vertical scrollbar */
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Align items at the top */
+  align-items: center;
+  height: 100vh;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.bottom {
+  margin: 5px 0; /* Adding some space between elements */
+}
+
+.bottom-button {
+  margin: 20% 0; /* Adding some space between elements */
+}
+
+.rounded-button {
+  border: 2px dotted grey; /* Dotted border */
+  color: white; /* Text color */
+  padding: 10px 50px; /* Padding for the button */
+  text-align: center; /* Center the text */
+  text-decoration: none; /* Remove underline from the text */
+  display: inline-block; /* Display as an inline block element */
+  font-size: 16px; /* Font size */
+  border-radius: 12px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+.font {
+  font-family: 'Font';
+}
+
+@font-face {
+  font-family: 'Font';
+  src: url(font/font.TTF);
+}
+
+.rounded-button:hover {
+  background-color: darkgrey; /* on hover */
+}
+
+.button-container {
+  text-align: center;
+  margin-top: 40%; /* Adjust top margin if needed */
+}
+
+.copyright a {
+  color: inherit; /* Inherit color from parent */
+  text-decoration: none; /* Remove underline */
+}
+
+.copyright {
+  color: darkslategrey;
+  text-align: center; /* Centering the text */
+  margin-top: 10px; /* Adjust top margin if needed */
+}
+
+
+@keyframes bounce {
+  0%, 30%, 90%, 100% {
+    transform: translateY(0);
+  }
+  40%, 80% {
+    transform: translateY(-15px);
+  }
+}
+
+.logo {
+  position: fixed;
+  top: 5%;
+  right: 0;
+  left: 0;
+  margin-right: auto;
+  margin-left: auto;
+  width: 40%;
+  min-width: 500px;
+  animation: bounce 2.41s ease-in-out infinite;
+  z-index: 1;
+}
