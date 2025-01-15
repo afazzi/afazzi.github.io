@@ -4,4 +4,4 @@
 # Ignore all files in any directory named temp
 temp/
 
-sfx/
+*/sfx/
