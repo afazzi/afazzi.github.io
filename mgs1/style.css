@@ -1,6 +1,7 @@
 body {
   overflow-y: hidden; /* Hide vertical scrollbar */
   overflow-x: hidden; /* Hide horizontal scrollbar */
+  overflow: hidden; /* Prevent scrollbars from appearing */
  /* width: 500px;
   aspect-ratio: 4/3; */
 }
@@ -79,6 +80,9 @@ body {
   font-family: "Monaco", "Courier New", monospace;
   animation: press-start 3s linear infinite, fade-in 10s;
   text-decoration: none;
+  background: transparent;
+  border: none; /* Remove default button border */
+  cursor: pointer; /* Change cursor to pointer on hover */
 }
 
 @keyframes press-start{
@@ -134,21 +138,23 @@ body {
   height: 100vh; /* Ensure the element takes the full viewport height */
   animation: slide 65s linear infinite;
   z-index: -3;
+  overflow: hidden;
 }
 
 .zooming-background {
   background: url("img/bg.jpg");
   mix-blend-mode: screen;
-  position: absolute;
+  position: fixed; /* Ensure it stays fixed */
   background-size: cover;
   background-position: center;
-  width: 100%;
-  height: 100%;
+  width: 100vw; /* Use viewport width */
+  height: 100vh; /* Use viewport height */
   top: 0;
   left: 0;
   animation: zoom 35s linear infinite;
   -webkit-animation-fill-mode: forwards;
   z-index: -2;
+  overflow: hidden; /* Ensure no scrollbars appear */
 }
 
 .vertical-menu {
@@ -299,3 +305,25 @@ body {
   }  
 }
 
+[popover] {
+  position: fixed;
+  inset: 0;
+  width: 300px;
+  height: fit-content;
+  margin: auto;
+  border: solid red; /* Red border */
+  padding: 0.25em;
+  overflow: auto;
+  color: red; /* Red text */
+  background-color: black; /* Black background */
+  text-align: center; /* Centered text */
+}
+
+[popover] a, [popover] button {
+  color: red; /* Red text */
+  font-weight: bold; /* Bold text */
+  text-decoration: none; /* No underline */
+  background: none; /* Remove default button background */
+  border: none; /* Remove default button border */
+  cursor: pointer; /* Pointer cursor for button */
+}

@@ -12,7 +12,7 @@
   <img class="center logo" src="img/logo.png" alt="Metal Gear Solid logo">
   <img class="center snake" src="img/snake.png" alt="Solid Snake character portrait">
   <img class="center snakebg" src="img/snakebg.png" alt="shadow behind snake">
-  <a href="#" id="playButton" class="center bottom20 button">PRESS START BUTTON</a>
+  <button class="center bottom20 button" popovertarget="menu">PRESS START BUTTON</button>
   <!-- <div class="vertical-menu">
     <a href="#" class="active">EXIT</a>
     <a href="#">NEW GAME</a>
@@ -20,9 +20,14 @@
     <a href="#">Link 3</a>
     <a href="#">Link 4</a>
   </div> -->
-  <div class="center bottom10 copyright"><a href="../index.html">© 1987 1998 KONAMI ALL RIGHTS RESERVED</a></div>
-  <P>Website by Fazzi</P>
+
+  <div id="menu" popover>
+    <p><button>Toggle Music</button></p>
+    <p><a href="../index.html">Exit to Library</a></p>
+  </div>
+
+  <div class="center bottom10 copyright">© 1987 1998 KONAMI ALL RIGHTS RESERVED</div>
+  <p>Website by Fazzi</p>
   <audio id="audioPlayer" src="sfx/music.mp3"></audio>
-</div>
 </body>
 </html>

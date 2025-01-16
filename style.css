@@ -8,6 +8,7 @@
     padding-bottom: 12px;
     display: flex;
     align-items: center;
+    position: -webkit-sticky; /* Add -webkit- prefix */
     position: sticky; /* Make the title section sticky */
     top: 0; /* Stick to the top */
     z-index: 1000; /* Ensure it stays above other content */
@@ -20,6 +21,16 @@ a {
     padding-left: 10px;
     width: calc(100% - 10px);
     box-sizing: border-box;
+}
+.category {
+    color: #cae4fb;
+    cursor: pointer;
+    user-select: none;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    margin-left: 0;
+    margin-bottom: 5px; /* Reduce the gap */
 }
 li {
     color: white;
@@ -71,9 +82,11 @@ html, body {
     bottom: 15%;
     left: 50%;
     transform: translateX(-50%);
-    overflow-y: auto;
+    overflow-y: auto; /* Ensure overflow property is set */
+    -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS */
 }
 .window .title {
+    position: -webkit-sticky; /* Add -webkit- prefix */
     position: sticky; /* Make the title sticky within the window */
     top: 0;
     z-index: 10;
@@ -93,16 +106,7 @@ ul {
 .pad {
     padding: 10px;
 }
-.category {
-    color: #cae4fb;
-    cursor: pointer;
-    user-select: none;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-left: 10px;
-    margin-left: 0;
-    margin-bottom: 5px; /* Reduce the gap */
-}
+
 .category:hover {
     background-color: #323a4b;
 }
@@ -153,3 +157,4 @@ details[open] .category {
     scrollbar-width: thin; /* Thin scrollbar */
     scrollbar-color: #323a4b #171d25; /* Thumb color and track color */
 }
+

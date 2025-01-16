@@ -1,13 +1,18 @@
-document.addEventListener('DOMContentLoaded', function() {
-  var playButton = document.getElementById('playButton');
-  var audio = document.getElementById('audioPlayer');
+document.addEventListener('DOMContentLoaded', () => {
+    const audioPlayer = document.getElementById('audioPlayer');
+    const toggleMusicButton = document.querySelector('#menu button');
+    const startButton = document.querySelector('.button');
+    const gunshotAudio = new Audio('sfx/gunshot.wav');
 
-  playButton.addEventListener('click', function(event) {
-    event.preventDefault(); // Prevent the default link behavior
-    if (audio.paused) {
-      audio.play();
-    } else {
-      audio.pause();
-    }
-  });
+    toggleMusicButton.addEventListener('click', () => {
+        if (audioPlayer.paused) {
+            audioPlayer.play();
+        } else {
+            audioPlayer.pause();
+        }
+    });
+
+    startButton.addEventListener('click', () => {
+        gunshotAudio.play();
+    });
 });
