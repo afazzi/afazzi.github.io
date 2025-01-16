@@ -73,6 +73,11 @@ html, body {
     transform: translateX(-50%);
     overflow-y: auto;
 }
+.window .title {
+    position: sticky; /* Make the title sticky within the window */
+    top: 0;
+    z-index: 10;
+}
 .favicon {
     width: 16px;
     height: 16px;
