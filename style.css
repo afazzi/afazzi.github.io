@@ -106,6 +106,9 @@ ul {
 .category:hover {
     background-color: #323a4b;
 }
+details[open] .category {
+    background-color: #323a4b;
+}
 @media (max-width: 600px), (class: ios) { /* Corrected media query */
     .window {
         padding: 0;
