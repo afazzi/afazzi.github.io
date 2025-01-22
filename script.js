@@ -4,16 +4,3 @@ document.addEventListener("DOMContentLoaded", function() {
         document.body.classList.add('ios');
     }
 });
-
-/* ...existing code... */
-function toggleContent(id) {
-    var element = document.getElementById(id);
-    var categoryLink = element.previousElementSibling.querySelector('a');
-    if (element.classList.contains('hidden')) {
-        element.classList.remove('hidden');
-        categoryLink.innerHTML = categoryLink.innerHTML.replace('+', '-');
-    } else {
-        element.classList.add('hidden');
-        categoryLink.innerHTML = categoryLink.innerHTML.replace('-', '+');
-    }
-}

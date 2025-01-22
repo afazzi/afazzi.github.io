@@ -51,6 +51,10 @@ li {
 li:hover {
     background-color: #323a4b;
 }
+li > a > img {
+    width: 16px;
+    height: 16px;
+}
 body {
     color: #8b929a;
     background-color: black;
@@ -103,6 +107,7 @@ li > img {
     }
     body {
         background-color: #171d25;
+        background-attachment: fixed; /* Ensure background does not move on iOS */
         background-attachment: fixed; /* Ensure background does not move on iOS */
     }
 }
