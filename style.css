@@ -1,6 +1,6 @@
 h1 {
     color: #8b929a;
-    font-size: medium;
+    font-size: large;
     background-color: #171d25;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
@@ -52,28 +52,39 @@ li:hover {
     background-color: #323a4b;
 }
 li > a > img {
-    width: 16px;
-    height: 16px;
+    width: 1.25em;
+    height: 1.25em;
+    padding-right: .5em;
 }
 body {
     color: #8b929a;
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative; /* Required for pseudo-element positioning */
+    margin: 0; /* Ensure no margin around the body */
+    overflow: hidden; /* Prevent scrollbars from appearing */
+}
+.background {
     background-color: black;
     background: url('img/bg.png') no-repeat center center fixed;
     background-size: cover;
-    font-family: Arial, Helvetica, sans-serif;
     background-attachment: fixed; /* Ensure background does not move */
-    filter: brightness(10%);
-    z-index: -100;
+    position: fixed; /* Ensure it covers the entire viewport */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    filter: brightness(10%); /* Darken the background image */
+    z-index: -1; /* Ensure it is behind the content */
 }
 .window {
-    position: absolute;
-    width: 400px;
+    width: 25rem;
     background-color: #24282f;
     border-radius: 10px;
     padding-bottom: 15px;
     padding-top: 0px;
-    top: 15%;
-    bottom: 15%;
+    position: fixed; /* Ensure it stays in the same place relative to the viewport */
+    top: 10%; /* Adjusted to make the window taller */
+    bottom: 10%; /* Adjusted to make the window taller */
     left: 50%;
     transform: translateX(-50%);
     overflow-y: auto; /* Ensure overflow property is set */
@@ -107,7 +118,6 @@ li > img {
     }
     body {
         background-color: #171d25;
-        background-attachment: fixed; /* Ensure background does not move on iOS */
         background-attachment: fixed; /* Ensure background does not move on iOS */
     }
 }
