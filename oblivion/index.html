@@ -15,7 +15,7 @@
   <div class="bg"></div>
   <img class="logo" src="img/logo.png" alt="The Elder Scrolls IV: Oblivion logo">
   <div class="menu-container">
-    <a href="#" id="playButton" class="menu">Continue</a>
+    <button class="menu" popovertarget="menu">Continue</button>
     <a href="#" class="menu">New</a>
     <a href="#" class="menu">Load</a>
     <a href="#" class="menu">Options</a>
@@ -23,9 +23,13 @@
     <a href="../index.html" class="menu">Exit</a>
   </div>
   
-  <audio id="audioPlayer" src="sfx/music.mp3"></audio>
-  
-  <p>Website by Fazzi</p>
+  <div id="menu" popover>
+    <p><button class="menu">Toggle Music</button></p>
+    <p><a class="menu" href="../index.html">Exit to Library</a></p>
+    <p>Website made by Fazzi. All other content is trademark or registered trademark of its respective owners.</p>
+  </div>
+
+  <audio id="audioPlayer" src="sfx/music.mp3" loop></audio>
 
   
   

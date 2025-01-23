@@ -27,12 +27,13 @@ body {
 .logo {
   position: fixed;
   top: 5%;
-  right: 0;
-  left: 0;
+  right: 50%; /* Change right to 50% */
+  left: 50%; /* Change left to 50% */
+  transform: translateX(-50%); /* Center the logo */
   margin-right: auto;
   margin-left: auto;
   width: 40%;
-  min-width: 500px;
+  min-width: 600px;
   animation: fade-in-title 5s;
   -webkit-animation-fill-mode: forwards;
   z-index: 1;
@@ -68,10 +69,8 @@ body {
   bottom: 20%;
   left: 50%;
   transform: translateX(-50%);
-  font-size: xx-large;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  font-size: 2em;
+  font-weight: bolder;
   color: red;
   -webkit-text-stroke: 2px;
   -webkit-text-stroke-color: darkred;
@@ -97,7 +96,7 @@ body {
   }  
 }
 
-.button a{
+.button a {
   color: inherit;
   text-decoration: none;
 }
@@ -308,13 +307,14 @@ body {
 [popover] {
   position: fixed;
   inset: 0;
-  width: 300px;
+  width: 20rem;
   height: fit-content;
   margin: auto;
   border: solid red; /* Red border */
-  padding: 0.25em;
+  padding: 2rem;
   overflow: auto;
   color: red; /* Red text */
+  font-size: x-large;
   background-color: black; /* Black background */
   text-align: center; /* Centered text */
 }

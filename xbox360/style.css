@@ -58,7 +58,6 @@ li > a > img {
 }
 body {
     color: #8b929a;
-    background-color: black;
     font-family: Arial, Helvetica, sans-serif;
     position: relative; /* Required for pseudo-element positioning */
     margin: 0; /* Ensure no margin around the body */

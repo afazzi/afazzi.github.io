@@ -7,13 +7,20 @@
     <script src="script.js"></script>
 </head>
 <body>
-  <img class="logo" src="img/logo.png" alt="Papers Please logo">
+    <img class="logo" src="img/logo.png" alt="Papers Please logo">
   <div class="center bottom button-container">
-    <a href="#" id="playButton" class="center bottom-button rounded-button font">PLAY</a>
+    <button popovertarget="menu" class="center rounded-button font">PLAY</button>
   </div>
-  <p class="center bottom copyright font"><a href="../index.html">Created by Lucas Pope</a></p>
+  <p class="center bottom copyright font">Created by Lucas Pope</p>
   <p class="center bottom copyright font">@dukope</p>
-  <p>Website by Fazzi</p>
-  <audio id="audioPlayer" src="sfx/music.mp3"></audio>
+  <audio id="audioPlayer" src="sfx/music.mp3" loop></audio>
+
+  <div id="menu" popover>
+    <img src="img/flag.png" alt="Flag" class="flag">
+    <h2>MENU</h2>
+    <p><button id="playButton">Toggle Music</button></p>
+    <p><a href="../index.html">Exit to Library</a></p>
+  </div>
+
 </body>
 </html>

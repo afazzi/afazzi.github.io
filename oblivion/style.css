@@ -1,5 +1,5 @@
 body {
-  background-color: black;
+  background-color: burlywood;
   overflow-y: hidden; /* Hide vertical scrollbar */
   overflow-x: hidden; /* Hide horizontal scrollbar */
   cursor: url(cursor.cur), auto;
@@ -137,6 +137,7 @@ body {
   border: 2px solid transparent; /* Default border style */
   transition: border-color 0.3s, box-shadow 0.3s, background 0.3s; /* Smooth transition effect */
   text-decoration: none; /* Remove underline */
+  background-color: transparent;
 }
 
 .menu:hover {
@@ -188,4 +189,32 @@ body {
   animation: fadein 3s forwards, logoscale 10s forwards;
   z-index: 1;
   pointer-events: none;
+}
+
+
+[popover] {
+  position: fixed;
+  background-image: url(./img/bg.png);
+  background-size: 120%;
+  background-position: center;
+  inset: 0;
+  width: 20rem;
+  height: fit-content;
+  margin: auto;
+  padding: 3rem;
+  overflow: hidden;
+  color: #4B2A1A;
+  background-color: burlywood; 
+  text-align: center; /* Centered text */
+  border-image: url("./img/border.png") 27 / 27px 27px 27px 27px round;
+}
+
+[popover] a, [popover] button {
+  color: #4B2A1A;
+  font-weight: bold; /* Bold text */
+  text-decoration: none; /* No underline */
+  background: none; /* Remove default button background */
+  border: none; /* Remove default button border */
+  cursor: pointer; /* Pointer cursor for button */
+  text-align: inherit;
 }
