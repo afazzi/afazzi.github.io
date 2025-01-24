@@ -16,17 +16,22 @@
   <img class="logo" src="img/logo.png" alt="The Elder Scrolls IV: Oblivion logo">
   <div class="menu-container">
     <button class="menu" popovertarget="menu">Continue</button>
-    <a href="#" class="menu">New</a>
+    <button class="menu" popovertarget="menu">New</button>
     <a href="#" class="menu">Load</a>
-    <a href="#" class="menu">Options</a>
-    <a href="#" class="menu">Credits</a>
+    <button class="menu" popovertarget="menu">Options</button>
+    <button class="menu" popovertarget="credits">Credits</button>
     <a href="../index.html" class="menu">Exit</a>
   </div>
   
   <div id="menu" popover>
     <p><button class="menu">Toggle Music</button></p>
+    <p><button class="menu" popovertarget="credits">Credits</button></p>
     <p><a class="menu" href="../index.html">Exit to Library</a></p>
-    <p>Website made by Fazzi. All other content is trademark or registered trademark of its respective owners.</p>
+    <p><button popovertarget="menu" class="menu">Back</button></p>
+  </div>
+
+  <div id="credits" popover>
+    <p>This website was created by Fazzi. All other content is either a trademark or a registered trademark of its respective owners. All rights are reserved. This website is not affiliated with or endorsed by the developer or publisher of the depicted game.</p>
   </div>
 
   <audio id="audioPlayer" src="sfx/music.mp3" loop></audio>

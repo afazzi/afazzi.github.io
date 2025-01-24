@@ -195,7 +195,7 @@ body {
 [popover] {
   position: fixed;
   background-image: url(./img/bg.png);
-  background-size: 120%;
+  background-size:cover;
   background-position: center;
   inset: 0;
   width: 20rem;
