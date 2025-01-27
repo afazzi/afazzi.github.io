@@ -66,10 +66,10 @@ li.grey {
 li.grey:hover {
     color: #c4ceda;
 }
-li.blue {
+li.busy {
     color: #2298ff;
 }
-li.blue:hover {
+li.busy:hover {
     color: #81c4ff;
 }
 li:hover {

@@ -32,7 +32,8 @@ body {
 }
 
 .footer {
-  background-image: url(img/bottom.png);
+  background-image: url(img/top.png);
+  transform: rotate(180deg);
   background-size: auto 100%; /* Make the image resize to fit the height of the container */
   background-repeat: repeat-x; /* Make the image repeat horizontally */
   position: fixed;

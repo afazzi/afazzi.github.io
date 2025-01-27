@@ -7,11 +7,56 @@
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensure this line is included -->
+    <style>
+        #myInput {
+            justify-content: center;
+  background-image: url('/css/searchicon.png'); /* Add a search icon to input */
+  background-color: #333;
+  background-position: 10px 12px; /* Position the search icon */
+  background-repeat: no-repeat; /* Do not repeat the icon image */
+  color: white;
+  width: 100; /* Full-width */
+  font-size: 16px; /* Increase font-size */
+  padding: 4px 4px 4px 4px; /* Add some padding */
+  border: 1px solid #000; /* Add a grey border */
+  margin-top: 5px;
+  margin-bottom: 5px; /* Add some space below the input */
+  margin-left: 10px;
+  margin-right: 10px;
+}        
+    </style>
+    <script>
+function myFunction() {
+    // Declare variables
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById('myInput');
+    filter = input.value.toUpperCase();
+    ul = document.getElementsByTagName('ul');
+    
+    // Loop through all ul elements
+    for (var j = 0; j < ul.length; j++) {
+        li = ul[j].getElementsByTagName('li');
+        
+        // Loop through all list items in the current ul element
+        for (i = 0; i < li.length; i++) {
+            a = li[i].getElementsByTagName("a")[0];
+            txtValue = a.textContent || a.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                li[i].style.display = "";
+            } else {
+                li[i].style.display = "none";
+            }
+        }
+    }
+}
+
+        </script>
 </head>
 <body>
     <div class="background"></div> 
     <div class="window">
-        <h1>Iconic Video Game Menus - in HTML!</h1>
+        <h1>Iconic Video Game Menus</h1>
+        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search">
         <div class="scrollable">
             <details open>
                 <summary>GAME MENUS</summary>
@@ -25,31 +70,31 @@
                 <summary class="">OTHER STUFF</summary>
                 <ul>
                     <li><a href="./blackjack/index.html"><img src="./blackjack/img/favicon.png">Blackjack</a></li>
-                    <li class="blue"><a href="./ps1/index.html"><img src="./ps1/img/favicon.png">PS1</a></li>
-                    <li class="grey"><a href="./ps1/index.html"><img src="./ps1/img/favicon.png">PS2</a></li>
-                    <li class="grey"><a href="./ps1/index.html"><img src="./ps1/img/favicon.png">PS3</a></li>
-                    <li class="grey"><a href="./ps1/index.html"><img src="./ps1/img/favicon.png">PS4</a></li>
-                    <li class="grey"><a href="./ps1/index.html"><img src="./ps1/img/favicon.png">PS5</a></li>
-                    <li class="grey"><a href="./ps1/index.html"><img src="./xbox/img/favicon.png">XBOX</a></li>
-                    <li class="grey"><a href="./xbox360/index.html"><img src="./xbox360/img/favicon.png">XBOX 360</a></li>
-                    <li class="grey"><a href="./ps1/index.html"><img src="./xboxone/img/favicon.png">XBOX ONE</a></li>
+                    <li class="busy"><a href="./ps1/index.html"><img src="./ps1/img/favicon.png">PS1</a></li>
+                    <li class="grey"><a href="#"><img src="./ps1/img/favicon.png">PS2</a></li>
+                    <li class="grey"><a href="#"><img src="./ps1/img/favicon.png">PS3</a></li>
+                    <li class="grey"><a href="#"><img src="./ps1/img/favicon.png">PS4</a></li>
+                    <li class="grey"><a href="#"><img src="./ps1/img/favicon.png">PS5</a></li>
+                    <li class="grey"><a href="#"><img src="./xbox/img/favicon.png">XBOX</a></li>
+                    <li class="grey"><a href="#"><img src="./xbox360/img/favicon.png">XBOX 360</a></li>
+                    <li class="grey"><a href="#"><img src="./xboxone/img/favicon.png">XBOX ONE</a></li>
                     <li class=""><a title="Services" href="https://fazzi.me"><img src="./img/services.png">Services</a></li>
                 </ul>
             </details>
-            <details open class="hidden">
+            <details open class="">
                 <summary>COMING SOON</summary>
                 <ul>
                     <li class="grey"><a href="#"><img src="./mgs2/img/favicon.png">METAL GEAR SOLID 2</a></li>
-                    <li class="blue"><a href="#"><img src="./mgs3/img/favicon.ico">METAL GEAR SOLID 3</a></li>
-                    <li><a href="#"><img src="./mgpeacewalker/favicon.png">METAL GEAR SOLID: PEACE WALKER</a></li>
-                    <li><a href="#"><img src="./halflife/img/favicon.png">Half-Life</a></li>
-                    <li><a href="#"><img src="./warcraft3/img/favicon.png">Warcraft 3</a></li>
-                    <li><a href="#"><img src="./minecraft/img/favicon.png">Minecraft</a></li>
-                    <li><a href="#"><img src="./perfectdark/favicon.png">Perfect Dark</a></li>
-                    <li><a href="#"><img src="./diablo2/img/favicon.jpg">Diablo2</a></li>
-                    <li><a href="#"><img src="./zelda/img/favicon.webp">Zelda</a></li>
-                    <li><a href="#"><img src="./castlevania/img/favicon.png">Castlevania</a></li>
-                    <li><a href="#"><img src="./stardew/img/favicon.png">Stardew Valley</a></li>
+                    <li class="busy"><a href="#"><img src="./mgs3/img/favicon.ico">METAL GEAR SOLID 3</a></li>
+                    <li class="grey"><a href="#"><img src="./mgpeacewalker/favicon.png">METAL GEAR SOLID: PEACE WALKER</a></li>
+                    <li class="grey"><a href="#"><img src="./halflife/img/favicon.png">Half-Life</a></li>
+                    <li class="grey"><a href="#"><img src="./warcraft3/img/favicon.png">Warcraft 3</a></li>
+                    <li class="grey"><a href="#"><img src="./minecraft/img/favicon.png">Minecraft</a></li>
+                    <li class="grey"><a href="#"><img src="./perfectdark/favicon.png">Perfect Dark</a></li>
+                    <li class="grey"><a href="#"><img src="./diablo2/img/favicon.jpg">Diablo2</a></li>
+                    <li class="grey"><a href="#"><img src="./zelda/img/favicon.webp">Zelda</a></li>
+                    <li class="grey"><a href="#"><img src="./castlevania/img/favicon.png">Castlevania</a></li>
+                    <li class="grey"><a href="#"><img src="./stardew/img/favicon.png">Stardew Valley</a></li>
                 </ul>
             </details>
             <details open class="hidden">

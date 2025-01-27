@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Page</title>
+  <style>
+    h1 {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <!-- Include the navigation menu -->
+  <div id="nav-container"></div>
+
+  <h1>Welcome to the Home Page</h1>
+  <p>This is the main content of the home page.</p>
+  
+  <!-- RSS Feed Container -->
+  <div id="rss-feed-container">
+    <h2>Latest Updates from the Steam Community Group</h2>
+    <ul id="rss-feed-list"></ul>
+  </div>
+
+  <script>
+    // Load the navigation menu using JavaScript
+    fetch('nav.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('nav-container').innerHTML = data;
+      });
+
+    // Function to fetch and display RSS feed with CORS proxy
+    function loadRSSFeed(url) {
+      const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
+      fetch(proxyUrl + url)
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Network response was not ok ' + response.statusText);
+          }
+          return response.text();
+        })
+        .then(str => new window.DOMParser().parseFromString(str, "text/xml"))
+        .then(data => {
+          const items = data.querySelectorAll("item");
+          let html = "";
+          items.forEach(el => {
+            const title = el.querySelector("title").textContent;
+            const link = el.querySelector("link").textContent;
+            const description = el.querySelector("description") ? el.querySelector("description").textContent : "No description available";
+            const pubDate = el.querySelector("pubDate") ? new Date(el.querySelector("pubDate").textContent).toLocaleDateString() : "No date available";
+
+            html += `<li>
+                      <a href="${link}" target="_blank">${title}</a>
+                      <p>${description}</p>
+                      <small>Published on: ${pubDate}</small>
+                     </li>`;
+          });
+          document.getElementById('rss-feed-list').innerHTML = html;
+        })
+        .catch(error => {
+          console.error('Error loading RSS feed:', error);
+          document.getElementById('rss-feed-list').innerHTML = 'Failed to load RSS feed.';
+        });
+    }
+
+    // Load the RSS feed
+    loadRSSFeed('https://steamcommunity.com/groups/ade/rss');
+  </script>
+</body>
+</html>
