@@ -1,3 +1,4 @@
 baseURL = 'https://hugo.fazzi.me/'
 languageCode = 'en-us'
-title = 'My New Hugo!'
+title = 'My New Hugo'
+theme = 'PaperMod'
