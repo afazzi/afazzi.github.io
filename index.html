@@ -7,32 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensure this line is included -->
 </head>
 <body>
-        <h1>Fazzi's websites</h1>
-        <p>Click on the links below to view the menus</p>
-
-        <h1>My RSS Feed</h1>
-        <div id="rss-feed"></div>
-
-        <script>
-            async function fetchRSS() {
-              const response = await fetch('https://bsky.app/profile/did:plc:bli3fwdyytrmejda5qpawt3b/rss');
-              const text = await response.text();
-              const parser = new DOMParser();
-              const xmlDoc = parser.parseFromString(text, 'text/xml');
-        
-              const items = xmlDoc.getElementsByTagName('item');
-              let htmlContent = '<ul>';
-              for (let i = 0; i < items.length; i++) {
-                const title = items[i].getElementsByTagName('title')[0].textContent;
-                const link = items[i].getElementsByTagName('link')[0].textContent;
-                htmlContent += `<li><a href="${link}" target="_blank">${title}</a></li>`;
-              }
-              htmlContent += '</ul>';
-              document.getElementById('rss-feed').innerHTML = htmlContent;
-            }
-        
-            fetchRSS();
-          </script>
+        <h1>Fazzi's page</h1>
+        <p>I am not sure yet what will go here.</p>
+        <P>For now, go ahead and check out my <a href="https://about.fazzi.me">about</a> page.</P>
 
 </body>
 </html>
