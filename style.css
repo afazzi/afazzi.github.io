@@ -1,4 +1,15 @@
 body {
-    background-color: #333;
+    background-color: #222;
+    color: #bbb;
+    font-family: Arial, sans-serif;
+}
+h1 {
     color: white;
+}
+a {
+    color: orange;
+}
+hr {
+    border: 5px solid #333;
+    border-style:dashed;
 }
