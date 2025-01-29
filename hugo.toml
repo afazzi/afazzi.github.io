@@ -1,4 +1,3 @@
 baseURL = 'https://hugo.fazzi.me/'
 languageCode = 'en-us'
 title = 'My New Hugo!'
-theme = 'ananke'
