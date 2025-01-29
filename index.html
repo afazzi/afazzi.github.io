@@ -7,40 +7,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensure this line is included -->
 </head>
 <body>
-    <div class="background"></div> 
-    <div class="window">
         <h1>Fazzi's websites</h1>
-        <details open>
-            <summary>GAME MENUS COMPLETE</summary>
-            <ul>
-                <li><a title="METAL GEAR SOLID" href="./mgs1/index.html"><img src="./mgs1/img/favicon.png">METAL GEAR SOLID</a></li>
-                <li><a title="Papers, Please" href="./papersplease/index.html"><img src="./papersplease/img/favicon.png">Papers, Please</a></li>
-                <li><a title="Oblivion" href="./oblivion/index.html"><img src="./oblivion/img/favicon.ico">The Elder Scrolls IV: Oblivion</a></li>
-            </ul>
-        </details>
-        <details>
-            <summary>GAME MENUS PLANNED</summary>
-            <ul>
-                <li><a href="#"><img src="./mgs1/img/favicon.png">METAL GEAR SOLID 2</a></li>
-                <li><a href="#"><img src="./mgs1/img/favicon.png">METAL GEAR SOLID 3</a></li>
-                <li><a href="#"><img src="./mgs1/img/favicon.png">METAL GEAR SOLID: PEACE WALKER</a></li>
-                <li><a href="#"><img src="./mgs1/img/favicon.png">Half-Life</a></li>
-                <li><a href="#"><img src="./mgs1/img/favicon.png">Warcraft 3</a></li>
-                <li><a href="#"><img src="./mgs1/img/favicon.png">Minecraft</a></li>
-                <li><a href="#"><img src="./mgs1/img/favicon.png">Perfect Dark</a></li>
-                <li><a href="#"><img src="./mgs1/img/favicon.png">Diablo2</a></li>
-                <li><a href="#"><img src="./mgs1/img/favicon.png">Zelda</a></li>
-                <li><a href="#"><img src="./mgs1/img/favicon.png">Castlevania</a></li>
-                <li><a href="#"><img src="./mgs1/img/favicon.png">Stardew Valley</a></li>
-            </ul>
-        </details>
-        <details>
-            <summary>CREDITS</summary>
-            <ul>
-                <li><a href="#"><img src="./mgs1/img/favicon.png">Project by Fazzi</a></li>
-            </ul>
-        </details>
-        <div class="pad">Thanks for visiting. I started this project to re-live a small piece of some of my favorite games.</div>
-    </div>
+        <p>Click on the links below to view the menus</p>
+
+        <h1>My RSS Feed</h1>
+        <div id="rss-feed"></div>
+
+        <script>
+            async function fetchRSS() {
+              const response = await fetch('https://bsky.app/profile/did:plc:bli3fwdyytrmejda5qpawt3b/rss');
+              const text = await response.text();
+              const parser = new DOMParser();
+              const xmlDoc = parser.parseFromString(text, 'text/xml');
+        
+              const items = xmlDoc.getElementsByTagName('item');
+              let htmlContent = '<ul>';
+              for (let i = 0; i < items.length; i++) {
+                const title = items[i].getElementsByTagName('title')[0].textContent;
+                const link = items[i].getElementsByTagName('link')[0].textContent;
+                htmlContent += `<li><a href="${link}" target="_blank">${title}</a></li>`;
+              }
+              htmlContent += '</ul>';
+              document.getElementById('rss-feed').innerHTML = htmlContent;
+            }
+        
+            fetchRSS();
+          </script>
+
 </body>
 </html>
