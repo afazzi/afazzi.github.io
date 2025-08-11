@@ -4,7 +4,7 @@ date = 2025-01-27T22:15:35-08:00
 draft = false
 tags = ["first-post", "hugo", "getting-started"]
 categories = ["general"]
-author = "Your Name"
+author = "Fazzi"
 showToc = true
 showReadingTime = true
 +++
