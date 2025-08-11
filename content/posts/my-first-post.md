@@ -48,11 +48,13 @@ To create a new post like this one:
 
 Here's a simple example:
 
-{{< code-block title="Hello World in Python" lang="python" code="def hello_world():
+```python
+def hello_world():
     print('Hello, World!')
     
 if __name__ == '__main__':
-    hello_world()" >}}
+    hello_world()
+```
 
 ## What's Next?
 

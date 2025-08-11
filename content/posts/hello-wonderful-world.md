@@ -33,11 +33,13 @@ We can continue to enhance this site with:
 
 Here's a simple code example using our new shortcode:
 
-{{< code-block title="Example JavaScript" lang="javascript" code="function greet(name) {
+```javascript
+function greet(name) {
   return `Hello, ${name}! Welcome to our Hugo site!`;
 }
 
-console.log(greet('World'));" >}}
+console.log(greet('World'));
+```
 
 ## Features
 
@@ -57,6 +59,6 @@ To use these new features in your posts:
 1. Add `showToc = true` for table of contents
 2. Add `showReadingTime = true` for reading time estimates
 3. Use tags and categories for better organization
-4. Try out the new shortcodes like `{{< alert >}}` and `{{< code-block >}}`
+4. Try out the new shortcodes like `{{< alert >}}`
 
 Stay tuned for more updates and tutorials!
