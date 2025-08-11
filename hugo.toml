@@ -14,8 +14,10 @@ minify = true
 gc = true
 
 # Content organization
-paginate = 5
 summaryLength = 200
+
+[pagination]
+  pagerSize = 5
 
 # Menu configuration
 [menu]
@@ -62,5 +64,5 @@ summaryLength = 200
 # Security headers
 [security]
   [security.exec]
-    allow = ['^dart-sass-embedded$', '^go$', '^npx$', '^postcss$', '^babel$']
+    allow = ['^dart-sass-embedded$', '^go$', '^npx$', '^postcss$', '^babel$', '^git$']
     osEnv = ['(?i)^(PATH|PATHEXT|APPDATA|TMP|TEMP|TERM)$']
