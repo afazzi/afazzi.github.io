@@ -1,7 +1,7 @@
 baseURL = 'https://hugo.fazzi.me/'
 languageCode = 'en-us'
-title = 'My New Hugo'
-theme = 'ananke'
+title = "Fazzi's Site"
+theme = 'hello-friend-ng'
 
 # Enable modern Hugo features
 enableGitInfo = true
@@ -32,24 +32,18 @@ summaryLength = 200
     url = "/posts/"
     weight = 2
 
-# Social media links
+# Theme params
 [params]
   description = "A personal blog built with Hugo"
   author = "Your Name"
   github = "afazzi"
-  
-  # Enable dark mode toggle
   enableDarkMode = true
-  
-  # Enable search functionality
   enableSearch = true
-  
-  # Enable reading time estimates
   showReadingTime = true
-  
-  # Enable table of contents
   showToc = true
   tocOpen = true
+  # hello-friend-ng supports customCSS list of URLs
+  customCSS = ["/css/custom.css"]
 
 # Markup configuration
 [markup]
