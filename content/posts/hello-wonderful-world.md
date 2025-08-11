@@ -1,10 +1,10 @@
 +++
 title = "Hello Wonderful World!"
-date = 2025-01-27T22:15:35-08:00
+date = 2025-08-11T22:15:35-08:00
 draft = false
-tags = ["hello", "first-post", "hugo"]
+tags = ["hello"]
 categories = ["general"]
-author = "Your Name"
+author = "Fazzi"
 showToc = true
 showReadingTime = true
 +++
