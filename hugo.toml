@@ -8,6 +8,7 @@ enableGitInfo = true
 enableEmoji = true
 enableRobotsTXT = true
 enableFingerprinting = true
+buildFuture = true
 
 # Performance optimizations
 minify = true

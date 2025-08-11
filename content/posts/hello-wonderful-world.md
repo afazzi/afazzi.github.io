@@ -1,6 +1,6 @@
 +++
 title = "Hello Wonderful World!"
-date = 2025-08-11T22:15:35-08:00
+date = 2025-08-10T22:15:35-08:00
 draft = false
 tags = ["hello"]
 categories = ["general"]
