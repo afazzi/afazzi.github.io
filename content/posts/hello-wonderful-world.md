@@ -59,6 +59,6 @@ To use these new features in your posts:
 1. Add `showToc = true` for table of contents
 2. Add `showReadingTime = true` for reading time estimates
 3. Use tags and categories for better organization
-4. Try out the new shortcodes like `{{< alert >}}`
+4. Try out the new alert shortcode
 
 Stay tuned for more updates and tutorials!
