@@ -35,8 +35,8 @@ summaryLength = 200
 
 # Theme params
 [params]
-  description = "A personal blog built with Hugo"
-  author = "Your Name"
+  description = "An uninteresting website"
+  author = "Fazzi"
   github = "afazzi"
   enableDarkMode = true
   enableSearch = true
