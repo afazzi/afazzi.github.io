@@ -1,0 +1,8 @@
+<div class="alert alert-{{ .Get "type" | default "info" }}">
+  <div class="alert-icon">
+    {{ if eq (.Get "type") "warning" }}⚠️{{ else if eq (.Get "type") "error" }}❌{{ else if eq (.Get "type") "success" }}✅{{ else }}ℹ️{{ end }}
+  </div>
+  <div class="alert-content">
+    {{ .Inner | markdownify }}
+  </div>
+</div>

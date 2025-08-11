@@ -1,0 +1,8 @@
+<div class="code-block">
+  {{ if .Get "title" }}
+    <div class="code-title">{{ .Get "title" }}</div>
+  {{ end }}
+  <div class="code-content">
+    {{ highlight (.Get "code") (.Get "lang" | default "text") }}
+  </div>
+</div>

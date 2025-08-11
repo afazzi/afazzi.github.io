@@ -1,0 +1,65 @@
+{{ define "main" }}
+<article class="post-single">
+  <header class="post-header">
+    <h1 class="post-title">{{ .Title }}</h1>
+    <div class="post-meta">
+      <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+        {{ .Date.Format "January 2, 2006" }}
+      </time>
+      {{ if .Params.author }}
+        <span class="post-author">by {{ .Params.author }}</span>
+      {{ end }}
+      {{ if .Params.tags }}
+        <div class="post-tags">
+          {{ range .Params.tags }}
+            <a href="{{ "tags/" | relLangURL }}{{ . | urlize }}" class="tag">{{ . }}</a>
+          {{ end }}
+        </div>
+      {{ end }}
+    </div>
+  </header>
+  
+  <div class="post-content">
+    {{ .Content }}
+  </div>
+  
+  {{ if .Params.showToc }}
+    <aside class="post-toc">
+      <h3>Table of Contents</h3>
+      {{ .TableOfContents }}
+    </aside>
+  {{ end }}
+  
+  <footer class="post-footer">
+    {{ if .Params.showReadingTime }}
+      <p class="reading-time">
+        Reading time: {{ math.Round (div (countwords .Content) 200.0) }} minutes
+      </p>
+    {{ end }}
+    
+    {{ if .Params.categories }}
+      <div class="post-categories">
+        <strong>Categories:</strong>
+        {{ range .Params.categories }}
+          <a href="{{ "categories/" | relLangURL }}{{ . | urlize }}" class="tag">{{ . }}</a>
+        {{ end }}
+      </div>
+    {{ end }}
+  </footer>
+</article>
+
+{{ if .Params.showToc }}
+<style>
+  .post-toc {
+    position: sticky;
+    top: 2rem;
+  }
+  
+  @media (max-width: 768px) {
+    .post-toc {
+      position: static;
+    }
+  }
+</style>
+{{ end }}
+{{ end }}

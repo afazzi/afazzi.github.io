@@ -2,3 +2,65 @@ baseURL = 'https://hugo.fazzi.me/'
 languageCode = 'en-us'
 title = 'My New Hugo'
 theme = 'ananke'
+
+# Enable modern Hugo features
+enableGitInfo = true
+enableEmoji = true
+enableRobotsTXT = true
+enableFingerprinting = true
+
+# Performance optimizations
+minify = true
+gc = true
+
+# Content organization
+paginate = 5
+summaryLength = 200
+
+# Menu configuration
+[menu]
+  [[menu.main]]
+    identifier = "home"
+    name = "Home"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    identifier = "posts"
+    name = "Posts"
+    url = "/posts/"
+    weight = 2
+
+# Social media links
+[params]
+  description = "A personal blog built with Hugo"
+  author = "Your Name"
+  github = "afazzi"
+  
+  # Enable dark mode toggle
+  enableDarkMode = true
+  
+  # Enable search functionality
+  enableSearch = true
+  
+  # Enable reading time estimates
+  showReadingTime = true
+  
+  # Enable table of contents
+  showToc = true
+  tocOpen = true
+
+# Markup configuration
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    style = "github"
+    lineNos = true
+    lineNumbersInTable = true
+
+# Security headers
+[security]
+  [security.exec]
+    allow = ['^dart-sass-embedded$', '^go$', '^npx$', '^postcss$', '^babel$']
+    osEnv = ['(?i)^(PATH|PATHEXT|APPDATA|TMP|TEMP|TERM)$']
