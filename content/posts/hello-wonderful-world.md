@@ -9,3 +9,7 @@ showToc = true
 showReadingTime = true
 +++
 What in the world would this look like as plain as this!?
+
+![maxresdefault](https://chevereto.fazzi.me/images/2025/08/15/maxresdefault.jpg)
+
+Test Test.
