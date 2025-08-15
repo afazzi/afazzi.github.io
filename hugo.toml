@@ -61,3 +61,9 @@ summaryLength = 200
   [security.exec]
     allow = ['^dart-sass-embedded$', '^go$', '^npx$', '^postcss$', '^babel$', '^git$']
     osEnv = ['(?i)^(PATH|PATHEXT|APPDATA|TMP|TEMP|TERM)$']
+
+[markup.goldmark.renderHooks.image]
+enableDefault = true
+
+[markup.goldmark.renderHooks.link]
+enableDefault = true
