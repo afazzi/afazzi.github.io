@@ -17,9 +17,6 @@ gc = true
 # Content organization
 summaryLength = 200
 
-enableThemeToggle = true
-enableSharingButtons = true
-
 #gitUrl = "https://github.com/afazzi/afazzi.github.io/"
 
 [pagination]
@@ -48,6 +45,8 @@ enableSharingButtons = true
   showReadingTime = true
   showToc = true
   tocOpen = true
+  enableThemeToggle = true
+  enableSharingButtons = true
   # hello-friend-ng supports customCSS list of URLs
   customCSS = ["/css/custom.css"]
 
