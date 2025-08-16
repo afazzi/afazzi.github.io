@@ -46,6 +46,10 @@ summaryLength = 200
   # hello-friend-ng supports customCSS list of URLs
   customCSS = ["/css/custom.css"]
 
+[[params.social]]
+  name = "steam"
+  url = "https://steamcommunity.com/id/retsam"
+
 # Markup configuration
 [markup]
   [markup.goldmark]
