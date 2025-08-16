@@ -1,5 +1,5 @@
 +++
-title = Fazzi's Site
+title = "Fazzi's Site"
 date = 2025-08-15
 draft = false
 url = /
