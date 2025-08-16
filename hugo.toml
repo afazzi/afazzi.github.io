@@ -4,7 +4,7 @@ title = "Fazzi's Site"
 theme = 'hello-friend-ng'
 
 # Enable modern Hugo features
-enableGitInfo = true
+enableGitInfo = false
 enableEmoji = true
 enableRobotsTXT = true
 enableFingerprinting = true
@@ -20,7 +20,6 @@ summaryLength = 200
 enableThemeToggle = true
 enableSharingButtons = true
 
-enableGitInfo = false
 #gitUrl = "https://github.com/afazzi/afazzi.github.io/"
 
 [pagination]
