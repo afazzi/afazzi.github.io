@@ -39,17 +39,17 @@ enableSharingButtons = true
     weight = 2
 
 # Theme params
-[params]
-  description = "An uninteresting website"
-  author = "Fazzi"
-  github = "afazzi"
-  enableDarkMode = true
-  enableSearch = true
-  showReadingTime = true
-  showToc = true
-  tocOpen = true
+#[params]
+description = "An uninteresting website"
+author = "Fazzi"
+github = "afazzi"
+enableDarkMode = true
+enableSearch = true
+showReadingTime = true
+showToc = true
+tocOpen = true
   # hello-friend-ng supports customCSS list of URLs
-  customCSS = ["/css/custom.css"]
+customCSS = ["/css/custom.css"]
 
 [[params.social]]
   name = "steam"
