@@ -2,7 +2,6 @@ baseURL = 'https://blog.fazzi.me/'
 languageCode = 'en-us'
 title = "Fazzi's Site"
 theme = 'hello-friend-ng'
-toc = false
 
 # Enable modern Hugo features
 enableGitInfo = false
@@ -44,10 +43,10 @@ summaryLength = 200
   enableDarkMode = true
   enableSearch = true
   showReadingTime = true
-  showToc = true
-  tocOpen = true
+  showToc = false
+  tocOpen = false
   enableThemeToggle = true
-  enableSharingButtons = true
+  enableSharingButtons = false
   # hello-friend-ng supports customCSS list of URLs
   customCSS = ["/css/custom.css"]
 
