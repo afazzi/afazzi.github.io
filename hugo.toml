@@ -1,4 +1,4 @@
-baseURL = 'https://afazzi-github-io.pages.dev/'
+baseURL = 'https://blog.fazzi.me/'
 languageCode = 'en-us'
 title = "Fazzi's Site"
 theme = 'hello-friend-ng'
