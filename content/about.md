@@ -9,10 +9,10 @@ menu = "main"
 
 You can reach me at the following socials:
 
-x.com/afazzi
+[twitch.tv/afazzi](twitch.tv/afazzi)
 
-twitch.tv/afazzi
+[youtube.com/afazzi](youtube.com/afazzi)
 
-youtube.com/afazzi
+[x.com/afazzi](x.com/afazzi)
 
 But don't expect much.
