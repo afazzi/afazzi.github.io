@@ -20,9 +20,6 @@ summaryLength = 200
 enableThemeToggle = true
 enableSharingButtons = true
 
-[params.author]
-  name = "Fazzi"
-
 [pagination]
   pagerSize = 5
 
