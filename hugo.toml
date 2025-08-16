@@ -20,8 +20,8 @@ summaryLength = 200
 enableThemeToggle = true
 enableSharingButtons = true
 
-enableGitInfo = true
-gitUrl = "https://github.com/afazzi/afazzi.github.io/"
+enableGitInfo = false
+#gitUrl = "https://github.com/afazzi/afazzi.github.io/"
 
 [pagination]
   pagerSize = 5
