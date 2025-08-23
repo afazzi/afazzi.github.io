@@ -19,7 +19,7 @@
 
       {{ with $site.Site.Params.social }}
         <div>
-          {{ partial "social-icons.html" $site }}
+          {{ partial "social-icons.html" . }}
         </div>
       {{ end }}
 
