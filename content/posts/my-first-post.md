@@ -5,10 +5,12 @@ draft = false
 tags = ["first-post", "hugo", "getting-started"]
 categories = ["general"]
 author = "Fazzi"
-showToc = true
-showReadingTime = true
 +++
 
 What the heck is this 
 
 Remove all that other garbage. 
+
+<!-- showToc = true
+showReadingTime = true
+>
