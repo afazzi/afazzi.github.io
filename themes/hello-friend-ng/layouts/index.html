@@ -1,36 +1,39 @@
 {{ define "body" }}
-    <body class="{{ if .Site.Params.backgroundImage }} background-image" style="background-image: url('{{ .Site.Params.backgroundImage }}');" {{ else }}"{{ end }}>
+  <body class="{{ if .Site.Params.backgroundImage }}background-image{{ end }}" 
+        {{ if .Site.Params.backgroundImage }}style="background-image: url('{{ .Site.Params.backgroundImage }}');"{{ end }}>
 {{ end }}
 
 {{ define "main" }}
-    <main>
+  {{ $site := . }}  {{/* Capture top-level context */}}
+  <main>
+    <div>
+      {{ with $site.Site.Params.Portrait.Path }}
+        <img src="{{ $site.Site.Params.Portrait.Path }}" class="circle" 
+             alt="{{ $site.Site.Params.Portrait.Alt }}" 
+             style="max-width:{{ $site.Site.Params.Portrait.MaxWidth }}" />
+      {{ end }}
+
+      <h1>{{ $site.Site.Title }}</h1>
+
+      {{ partial "subtitle.html" $site }}
+
+      {{ with $site.Site.Params.social }}
         <div>
-            {{ if .Site.Params.Portrait.Path }}
-               <img src="{{ .Site.Params.Portrait.Path }}" class="circle" alt="{{ .Site.Params.Portrait.Alt }}" style="max-width:{{ .Site.Params.Portrait.MaxWidth }}" />
-            {{ end }}
-
-            <h1>{{ .Site.Title }}</h1>
-
-            {{ partial "subtitle.html" . }}
-
-            {{- with .Site.Params.social }}
-                <div>
-                    {{ partial "social-icons.html" . }}
-                </div>
-
-<section class="recent-posts">
-  <h2>Recent Posts</h2>
-  <ul>
-    {{ range first 5 (where .Site.RegularPages "Section" "posts") }}
-      <li>
-        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-        <span class="date">{{ .Date.Format "Jan 2, 2006" }}</span>
-      </li>
-    {{ end }}
-  </ul>
-</section>
-
-            {{- end }}
+          {{ partial "social-icons.html" $site }}
         </div>
-    </main>
+      {{ end }}
+
+      <section class="recent-posts">
+        <h2>Recent Posts</h2>
+        <ul>
+          {{ range first 5 (where $site.Site.RegularPages "Section" "posts") }}
+            <li>
+              <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+              <span class="date">{{ .Date.Format "Jan 2, 2006" }}</span>
+            </li>
+          {{ end }}
+        </ul>
+      </section>
+    </div>
+  </main>
 {{ end }}
